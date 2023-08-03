@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AlonePageComponent } from './alone/pages/alone-page/alone-page.component';
 
 const routes: Routes = [
   {
@@ -8,8 +9,8 @@ const routes: Routes = [
   },
   {
     path: 'alone',
-    loadChildren: () => import('./alone/pages/alone-page/alone-page.component')
-      .then( m => m.AlonePageComponent ),
+    //loadChildren: () => import('./alone/pages/alone-page/alone-page.component').then( (m) => m.AlonePageComponent ),
+    component: AlonePageComponent,
   },
   {
     path: '**',
